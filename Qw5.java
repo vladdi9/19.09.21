@@ -53,4 +53,14 @@ public class Qw5 {
                 arr[i][j]=j*numCols+i+1;
         System.out.println(Arrays.toString(arr));
     }
+    public static void fillOrderSnake() {
+        for (int i = 0; i < numRow; i++) {
+            if (i % 2 == 0)
+                for (int j = 0; j < numCols; j++)
+                    arr[i][j] = i * numCols + j + 1;
+            else
+                for (int j = numCols - 1; j >= 0; j--)
+                    arr[i][j] = i * numCols + (numCols - j);
+        }
+    }
 }
